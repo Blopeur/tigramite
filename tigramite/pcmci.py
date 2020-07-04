@@ -247,9 +247,8 @@ class PCMCI():
         # Set the verbosity for debugging/logging messages
         self.verbosity = verbosity
         # Set the variable names 
-        self.var_names = self.dataframe.var_names
-        print(self.var_names)
-        
+        self.var_names = [key for key in self.dataframe.var_names.keys()]
+
         # Store the shape of the data in the T and N variables
         self.T, self.N = self.dataframe.values.shape
         # Set the selected variables
