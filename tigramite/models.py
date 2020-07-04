@@ -164,7 +164,7 @@ class Models():
             if dim_z > 0:
                 # Copy and fit the model
                 a_model = deepcopy(self.model)
-                a_model.fit(X=array[2:].T, y=array[1])
+                a_model.fit(X=np.asnumpy(array[2:].T), y=np.asnumpy(array[1]))
                 # Cache the results
                 fit_results[j] = {}
                 fit_results[j]['model'] = a_model
