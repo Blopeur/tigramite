@@ -215,7 +215,9 @@ class DataFrame():
         array = np.zeros((dim, time_length), dtype=self.values.dtype)
         # Note, lags are negative here
         for i, (var, lag) in enumerate(XYZ):
-            for j in range(max_lag + lag, T + lag-1):
+            for j in range(max_lag + lag, T + lag):
+                if j > time_length:
+                    break
                 array[i, j] = self.values[j, var]
 
         # Choose which indices to use
