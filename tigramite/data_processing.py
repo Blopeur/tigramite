@@ -216,7 +216,7 @@ class DataFrame():
         # Note, lags are negative here
         for i, (var, lag) in enumerate(XYZ):
             for j in range(max_lag + lag, T + lag):
-                if j > time_length:
+                if j == time_length:
                     break
                 array[i, j] = self.values[j, var]
 
