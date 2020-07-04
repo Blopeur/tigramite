@@ -866,7 +866,7 @@ class PCMCI():
                                                     tau_min, tau_max)
 
         # Loop through the selected variables
-        for j in self.selected_variables:
+        for j in self.selected_variables.tolist():
             # Print the status of this variable
             if self.verbosity > 0:
                 print("\n## Variable %s" % self.var_names[j])
