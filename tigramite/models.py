@@ -1189,7 +1189,7 @@ class Prediction(Models, PCMCI):
         # Cache the test array
         self.test_array = test_array
         # Run the predictor
-        pred = self.fitted_model[target]['model'].predict(X=test_array[2:].T,
+        pred = self.fitted_model[target]['model'].predict(X=np.asnumpy(test_array[2:].T),
                                                           **pred_params)
         return pred
 
