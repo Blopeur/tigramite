@@ -10,6 +10,7 @@ import math
 import abc
 from scipy import special, stats, spatial
 import cupy as np
+import numpy
 import six
 import sys
 
@@ -1101,8 +1102,8 @@ class ParCorr(CondIndTest):
             Partial correlation coefficient.
         """
 
-        x_vals = self._get_single_residuals(array, target_var=0)
-        y_vals = self._get_single_residuals(array, target_var=1)
+        x_vals = np.asnumpy(self._get_single_residuals(array, target_var=0))
+        y_vals = np.asnumpy(self._get_single_residuals(array, target_var=1))
         val, _ = stats.pearsonr(x_vals, y_vals)
         return val
 
