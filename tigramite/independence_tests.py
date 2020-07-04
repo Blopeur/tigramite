@@ -1184,7 +1184,7 @@ class ParCorr(CondIndTest):
         else:
             trafo_val = value * np.sqrt(deg_f/(1. - value*value))
             # Two sided significance level
-            pval = stats.t.sf(np.abs(trafo_val), deg_f) * 2
+            pval = stats.t.sf(np.asnumpy(np.abs(trafo_val)), deg_f) * 2
 
         return pval
 
