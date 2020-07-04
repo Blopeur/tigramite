@@ -899,7 +899,7 @@ class PCMCI():
                         self.cond_ind_test.get_model_selection_criterion(
                             j, results[pc_alpha_here]['parents'], tau_max)
             # Record the optimal alpha value
-            optimal_alpha = _int_pc_alpha[score.argmin()]
+            optimal_alpha = _int_pc_alpha[np.asnumpy(score.argmin())]
             # Only print the selection results if there is more than one
             # pc_alpha
             if self.verbosity > 1 and select_optimal_alpha:
