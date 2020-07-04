@@ -873,7 +873,7 @@ class PCMCI():
                 if self.verbosity > 1:
                     print("\nIterating through pc_alpha = %s:" % _int_pc_alpha)
             # Initialize the scores for selecting the optimal alpha
-            score = np.zeros_like(_int_pc_alpha)
+            score = np.zeros_like(np.array(_int_pc_alpha, dtype=np.float))
             # Initialize the result
             results = {}
             for iscore, pc_alpha_here in enumerate(_int_pc_alpha):
