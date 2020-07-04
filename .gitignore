@@ -4,3 +4,9 @@
 
 # Python byte code
 *.pyc
+
+# Virtual Env
+venv
+
+# pycharm
+.idea

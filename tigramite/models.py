@@ -7,7 +7,7 @@
 from __future__ import print_function
 from copy import deepcopy
 
-import numpy as np
+import cupy as np
 
 from tigramite.data_processing import DataFrame
 from tigramite.pcmci import PCMCI

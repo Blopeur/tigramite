@@ -8,7 +8,8 @@ from collections import defaultdict, OrderedDict
 import sys
 import warnings
 import copy
-import numpy as np
+import cupy as np
+#import numpy as np
 import scipy.sparse
 import scipy.sparse.linalg
 

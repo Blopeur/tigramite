@@ -9,7 +9,7 @@ import warnings
 import math
 import abc
 from scipy import special, stats, spatial
-import numpy as np
+import cupy as np
 import six
 import sys
 

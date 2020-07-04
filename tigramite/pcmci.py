@@ -8,7 +8,7 @@ from __future__ import print_function
 import itertools
 from collections import defaultdict
 from copy import deepcopy
-import numpy as np
+import cupy as np
 
 def _create_nested_dictionary(depth=0, lowest_type=dict):
     """Create a series of nested dictionaries to a maximum depth.  The first
