@@ -127,7 +127,7 @@ class Models():
         # should be overwritten
         self.selected_variables = range(self.N)
         if selected_variables is not None:
-            self.selected_variables = [key for key in selected_variables.keys()]
+            self.selected_variables = np.asnumpy(selected_variables)
         # Find the maximal parents lag
         max_parents_lag = 0
         for j in self.selected_variables:
